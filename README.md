@@ -41,7 +41,7 @@ The primary goal of this project is to:
 - 🗓️ **Static Calendar:** Displays a monthly view with mock appointments.
 - 📋 **Schedule Overview:** Lists of upcoming appointments by day.
 - 📊 **Activity Section:** Static representation of activity using styled bar charts.
-- 🖼️ **Responsive Design:** Built using CSS Flexbox and Media Queries.
+- 🖼️ **Responsive Design:** Built using CSS Flexbox and Media Queries
 
 ---
 
