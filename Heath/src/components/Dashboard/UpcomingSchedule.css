@@ -1,0 +1,42 @@
+.upcoming-schedule {
+  height: 100%;
+}
+
+.schedule-days {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.schedule-day {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.day-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.day-appointments {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+@media (max-width: 1200px) {
+  .day-appointments {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .day-appointments {
+    flex-direction: row;
+  }
+}

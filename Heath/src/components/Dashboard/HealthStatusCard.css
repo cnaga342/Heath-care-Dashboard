@@ -1,0 +1,69 @@
+.health-status-card {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border-left: 4px solid transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.health-status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.health-status-card.healthy {
+  border-left-color: #10b981;
+}
+
+.health-status-card.issue {
+  border-left-color: #ef4444;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.card-status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.healthy .card-status-indicator {
+  background-color: #10b981;
+}
+
+.issue .card-status-indicator {
+  background-color: #ef4444;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0 0 8px 0;
+}
+
+.card-description {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .health-status-card {
+    min-width: 200px;
+    max-width: 200px;
+  }
+}

@@ -1,0 +1,137 @@
+.anatomy-container {
+  height: 100%;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.anatomy-content {
+  display: flex;
+  height: calc(100% - 30px);
+  gap: 24px;
+}
+
+.anatomy-visualization {
+  flex: 1;
+  position: relative;
+}
+
+.human-figure {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anatomy-image {
+  height: 100%;
+  max-height: 750px;
+  object-fit: contain;
+  margin-top: -50px;
+}
+
+.anatomy-indicator {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.anatomy-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.anatomy-indicator.healthy {
+  background-color: #10b981; 
+  margin-left: 10px;
+}
+
+.anatomy-indicator.healthy::after {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.anatomy-indicator.issue {
+  background-color: #ef4444; 
+  margin-left: 10px;
+}
+
+.anatomy-indicator.issue::after {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.indicator-label {
+  position: absolute;
+  white-space: nowrap;
+  background-color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  top: -24px;
+  left: 0;
+  z-index: 3;
+  display: none;
+}
+
+.anatomy-indicator:hover .indicator-label {
+  display: block;
+}
+
+.health-status-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 200px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .anatomy-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .health-status-cards {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anatomy-image {
+    max-height: 250px;
+  }
+}

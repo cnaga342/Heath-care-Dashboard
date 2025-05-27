@@ -1,0 +1,73 @@
+.dashboard-main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(min-content, max-content);
+  gap: 24px;
+}
+
+.dashboard-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  height: 100%;
+}
+
+.anatomy-section {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.calendar-section {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.schedule-section {
+  grid-column: span 7;
+}
+
+.activity-section {
+  grid-column: span 5;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    gap: 16px;
+  }
+
+  .anatomy-section,
+  .calendar-section {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+  .schedule-section,
+  .activity-section {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .anatomy-section,
+  .calendar-section,
+  .schedule-section,
+  .activity-section {
+    grid-column: span 1;
+  }
+}
