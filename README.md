@@ -12,7 +12,7 @@ A responsive and pixel-perfect static healthcare dashboard built with React. Thi
 ## 🚀 Live Demo
 
 🔗 **Hosted URL:** https://healthcare-drab-mu.vercel.app/ <br>
-🔗 **GitHub Repository:**https://github.com/Sumithra49/healthcare
+🔗 **GitHub Repository:**https://github.com/cnaga342/Heath-care-Dashboard
 
 ---
 
